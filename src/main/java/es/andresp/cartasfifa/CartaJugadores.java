@@ -15,19 +15,24 @@ public class CartaJugadores {
         Nacionalidad nacionalidadPortugal = new Nacionalidad(1, "Portugal");
         Nacionalidad nacionalidadSuecia = new Nacionalidad(2, "Suecia");
         Nacionalidad nacionalidadHolanda = new Nacionalidad(3, "Holanda");
-        Jugadores jugadoresRonaldo = new Jugadores(1,"Cristiano", "Ronaldo", 1, 1985/02/05, 93, 764.5, FALSE);
+        Jugadores jugadorRonaldo = new Jugadores(1,"Cristiano", "Ronaldo");
+        jugadorRonaldo.setRetirado(Boolean.FALSE);
+        jugadorRonaldo.setNacionalidad(nacionalidadPortugal);
+        jugadorRonaldo.setLiga("Serie A");
+        jugadorRonaldo.setFoto("fotoRonaldo");
+        
 
         em.getTransaction().begin();
         em.persist(nacionalidadPortugal);
         em.persist(nacionalidadSuecia);
         em.persist(nacionalidadHolanda);
-        em.persist(jugadoresRonaldo);
+        em.persist(jugadorRonaldo);
         em.getTransaction().commit();
         
         em.close(); 
         emf.close(); 
         try { 
-            DriverManager.getConnection("jdbc:derby:C:\\Users\\Usuario\\Documents\\NetBeansProjects\\CartasFifa\\BDCartasFifa;create=true"); 
+            DriverManager.getConnection("jdbc:derby:BDCartasFifa;shutdown=true"); 
         } catch (SQLException ex) { 
         }
     }
