@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="es.andresp_CartasFifa_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>es.andresp.cartasfifa.Jugadores</class>
+    <class>es.andresp.cartasfifa.Nacionalidad</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby:C:\Users\Usuario\Documents\NetBeansProjects\CartasFifa\BDCartasFifa;create=true"/>
+      <property name="javax.persistence.jdbc.user" value="APP"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+      <property name="javax.persistence.jdbc.password" value="cuchilla11"/>
+    </properties>
+  </persistence-unit>
+</persistence>
